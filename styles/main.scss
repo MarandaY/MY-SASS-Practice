@@ -1,0 +1,92 @@
+@import "./vendor/normalize";
+@import "./partials/colors";
+@import "./partials/typography";
+@import "./partials/mixins";
+
+.navigation {
+font-family: $title;
+background-color: $darker-bg;
+padding: 1em 3em 1.6em 3em;
+    div {
+        font-weight: bold;
+        border-bottom: 1px solid white;
+        display: inline;
+        color: white;
+        text-transform: uppercase;
+    }
+    nav {
+        display: inline;
+        float: right;
+        
+        a {
+            padding: 10px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: white;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.container {
+
+    .columns {
+        display: flex;
+        text-align:center;
+        margin: 100px 26px;
+    
+        .info {
+            flex: 50%;
+            padding: 0px 60px;
+            
+            a {
+                text-transform: uppercase;
+                font-weight: bold;
+                font-family: $font-primary;
+                color: $font-secondary-color;
+            }
+            h1 {
+                @include heading();
+            }
+
+            h2 {
+                font-family: $title;
+                font-size: 55px;
+                text-transform: uppercase;
+                font-weight: 600;
+                margin: 5px 0px;
+            }
+
+            p {
+                font-family: $font-primary;
+                font-size: 30px;
+                margin-top: 5px;
+                color: $font-primary-color;
+            }
+
+            .image {
+                width: 90%;
+                height: auto;
+            }
+        }
+    }
+}
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: $dark-bg;
+    color: white;
+    display: flex;
+    text-align:center;
+
+        .copy {
+            flex: 50%;
+            padding: 15px;
+            font-family: $font-primary;
+        }
+    }
